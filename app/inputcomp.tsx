@@ -195,8 +195,8 @@ const Inputcomp = () => {
 					)}
 					<Collapse in={reduites_actif}>
 						<CardContent>
-							{red.map((elt) => {
-								return <Typography variant="body2">{elt}</Typography>;
+							{red.map((elt,index) => {
+								return <Typography variant="body2" key={index}>{elt}</Typography>;
 							})}
 						</CardContent>
 					</Collapse>
