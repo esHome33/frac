@@ -12,7 +12,7 @@ export default function Home() {
 			<div className="py-4" />
 			<Inputcomp />
 			<Typography
-				className="text-center text-green-300"
+				className="text-center text-green-900 drop-shadow-xl shadow-white font-bold"
 				variant="body1"
 			>
 				programmé par ESHome33 - juin 2023
@@ -21,7 +21,7 @@ export default function Home() {
 				utilisation de
 				<Link
 					href="https://github.com/Daninet/exactnumber"
-					className="text-yellow-200"
+					className="text-yellow-500 drop-shadow-xl shadow-orange-900"
 				>
 					{" "}
 					exactnumber
