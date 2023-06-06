@@ -81,7 +81,7 @@ const Inputcomp = () => {
 	});
 
 	return (
-		<Container className="max-w-lg bg-green-400 rounded-lg p-8 text-blue-800 mb-10">
+		<Container className="max-w-lg bg-green-400 rounded-lg p-4 text-blue-800 mb-10">
 			<form
 				onSubmit={formik.handleSubmit}
 				className="p-4 text-center w-full"
@@ -96,7 +96,7 @@ const Inputcomp = () => {
 					>
 						Saisie d&apos;un réel ou d&apos;une fraction continue
 					</Typography>
-
+					<div className="h-4"> </div>
 					<TextField
 						color={"primary"}
 						id="real"
@@ -109,6 +109,7 @@ const Inputcomp = () => {
 						value={formik.values.real}
 						className="mb-4"
 					/>
+					<div className="h-4"> </div>
 					<TextField
 						color={"primary"}
 						id="fc"
@@ -120,7 +121,7 @@ const Inputcomp = () => {
 						onChange={formik.handleChange}
 						value={formik.values.fc}
 					/>
-
+					<div className="h-4"> </div>
 					<Button
 						variant="contained"
 						color="inherit"
@@ -134,7 +135,7 @@ const Inputcomp = () => {
 					</Button>
 				</FormControl>
 			</form>
-
+			<div className="h-4"> </div>
 			<Card
 				about="card"
 				elevation={3}
@@ -195,8 +196,15 @@ const Inputcomp = () => {
 					)}
 					<Collapse in={reduites_actif}>
 						<CardContent>
-							{red.map((elt,index) => {
-								return <Typography variant="body2" key={index}>{elt}</Typography>;
+							{red.map((elt, index) => {
+								return (
+									<Typography
+										variant="body2"
+										key={index}
+									>
+										{elt}
+									</Typography>
+								);
 							})}
 						</CardContent>
 					</Collapse>

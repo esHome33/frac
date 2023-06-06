@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-start p-10">
+		<main className="flex min-h-screen flex-col items-center justify-start p-4">
 			<Typography className="text-center">
 				Bienvenue dans le domaine des fractions continues
 			</Typography>
@@ -26,8 +26,6 @@ export default function Home() {
 					{" "}
 					exactnumber
 				</Link>{" "}
-			</Typography>
-			<Typography variant="body2">
 				et d&apos;un aglo &quot;maison&quot; pour trouver les réduites +
 				décomposer le réel en FC.
 			</Typography>
