@@ -1,10 +1,22 @@
 "use client";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Inputcomp from "./inputcomp";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 function Home() {
+	const [padding_gauche, setPadding_gauche] = useState("0px");
+
+	useEffect(() => {
+		if (window.innerWidth < 700) {
+			setPadding_gauche("0px");
+		} else {
+			setPadding_gauche("50px");
+		}
+		return;
+	},[]);
+
 	const router = useRouter();
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-start p-4">
@@ -18,7 +30,7 @@ function Home() {
 					backgroundColor: "seagreen",
 					zIndex: "10",
 					padding: "10px",
-					paddingLeft: "30px",
+					paddingLeft: padding_gauche,
 					paddingRight: "30px",
 				}}
 				onClick={(e) => {

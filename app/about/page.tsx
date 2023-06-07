@@ -2,17 +2,28 @@
 import { Container, Typography } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function About() {
 	const router = useRouter();
+	const [padding_gauche, setPadding_gauche] = useState("0px");
+
+	useEffect(() => {
+		if (window.innerWidth < 700) {
+			setPadding_gauche("0px");
+		} else {
+			setPadding_gauche("50px");
+		}
+		return;
+	},[]);
+
+	// `$(padding_gauche)`
 	return (
 		<main
 			className="flex min-h-screen flex-col  p-4"
 			style={{ padding: "10px" }}
 		>
 			<div
-
 				style={{
 					textAlign: "center",
 					display: "flex",
@@ -22,17 +33,16 @@ function About() {
 			>
 				<button
 					onClick={() => router.back()}
-				
-					style={{	
-						position: 'fixed',
-						top: '25px',
-						left: '50px',
+					style={{
+						position: "fixed",
+						top: "25px",
+						left: padding_gauche,
 						color: "white",
 						padding: "10px",
 						paddingRight: "25px",
 						paddingLeft: "25px",
 						borderRadius: "50px",
-						backgroundColor : 'seagreen'
+						backgroundColor: "seagreen",
 					}}
 				>
 					Retour
