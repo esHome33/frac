@@ -8,16 +8,26 @@ function Home() {
 	const router = useRouter();
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-start p-4">
-			<Button
-				className="fixed z-10 top-10 left-10 bg-white text-black hover:text-white hover:bg-black"
-				sx={{ borderRadius: "50px" }}
+			<button
+				style={{
+					borderRadius: "50px",
+					position: "fixed",
+					top: "50px",
+					left: "50px",
+					color: "white",
+					backgroundColor: "seagreen",
+					zIndex: "10",
+					padding: "10px",
+					paddingLeft: "30px",
+					paddingRight: "30px",
+				}}
 				onClick={(e) => {
 					e.preventDefault();
 					router.push("/about");
 				}}
 			>
 				Help
-			</Button>
+			</button>
 			<Typography className="text-center">
 				Bienvenue dans le domaine des{" "}
 				<Link
