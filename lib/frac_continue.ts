@@ -27,6 +27,9 @@ export default class Fraction_c {
 	public static CreerAPartirDunReel = (le_reel: string) => {
 		const resu = new Fraction_c();
 		let val = N("0");
+
+		// soit le réel est défini sous forme de fraction soit il est défini par un
+		// nombre au format partie entière.partie décimale
 		try {
 			val = N(le_reel);
 		} catch (e: any) {
