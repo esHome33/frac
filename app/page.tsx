@@ -10,12 +10,12 @@ function Home() {
 
 	useEffect(() => {
 		if (window.innerWidth < 700) {
-			setPadding_gauche("0px");
+			setPadding_gauche("2px");
 		} else {
 			setPadding_gauche("50px");
 		}
 		return;
-	},[]);
+	}, []);
 
 	const router = useRouter();
 	return (
@@ -25,12 +25,12 @@ function Home() {
 					borderRadius: "50px",
 					position: "fixed",
 					top: "50px",
-					left: "50px",
+					left: padding_gauche,
 					color: "white",
 					backgroundColor: "seagreen",
 					zIndex: "10",
 					padding: "10px",
-					paddingLeft: padding_gauche,
+					paddingLeft: "30px",
 					paddingRight: "30px",
 				}}
 				onClick={(e) => {
