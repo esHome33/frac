@@ -12,12 +12,10 @@ import {
 	Collapse,
 	Container,
 	FormControl,
-	Paper,
 	TextField,
 	Typography,
 } from "@mui/material";
 import { useFormik } from "formik";
-import { relative } from "path";
 import { useEffect, useState } from "react";
 import * as Yup from "yup";
 
@@ -66,7 +64,7 @@ const Inputcomp = () => {
 
 
 	useEffect(() => {
-		console.log(`début de useEffect création réel avec ${reel_a_transformer}`);
+		//console.log(`début de useEffect création réel avec ${reel_a_transformer}`);
 		setCalculating(true);
 		const creation_fc_avec_reel = () => {
 			const creer_reel = new Promise<Fraction_c>((resolve, reject) => {
@@ -78,7 +76,7 @@ const Inputcomp = () => {
 				}
 			});
 			creer_reel.then((f) => {
-				console.log(`création faite OK à partir du réel ${reel_a_transformer}`);
+				//console.log(`création faite OK à partir du réel ${reel_a_transformer}`);
 				setMon_reel(f.getReel());
 				const la_fraction = f.getFractionContinue();
 				const nb_terms = f.getSize();
@@ -107,7 +105,7 @@ const Inputcomp = () => {
 
 
 	useEffect(() => {
-		console.log(`fc a transformer changed (${fc_a_transformer})`);
+		//console.log(`fc a transformer changed (${fc_a_transformer})`);
 		if (fc_a_transformer.length === 0) {
 			setCalculatingFC(false);
 			return;
@@ -138,13 +136,13 @@ const Inputcomp = () => {
 
 
 	useEffect(() => {
-		console.log(`calculating = ${calculating} et réel = ${tampon_reel}`);
+		//console.log(`calculating = ${calculating} et réel = ${tampon_reel}`);
 		setReel_a_transformer(tampon_reel);
 		setTampon_reel("");
 	}, [calculating]);
 
 	useEffect(() => {
-		console.log(`calculating FC = ${calculatingFC} et fc  = ${tampon_fc}`);
+		//console.log(`calculating FC = ${calculatingFC} et fc  = ${tampon_fc}`);
 		setFc_a_transformer(tampon_fc);
 		setTampon_fc("");
 	}, [calculatingFC]);

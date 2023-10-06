@@ -62,7 +62,7 @@ function Home() {
 				>
 					ESHome33
 				</Link>{" "}
-				- juin 2023
+				- juin-oct 2023
 			</Typography>
 			<Typography variant="body1" className="text-center">
 				utilisation de

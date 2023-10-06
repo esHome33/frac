@@ -1,4 +1,5 @@
 "use client";
+
 import { Container, Typography } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,7 +16,7 @@ function About() {
 			setPadding_gauche("50px");
 		}
 		return;
-	},[]);
+	}, []);
 
 	// `$(padding_gauche)`
 	return (
@@ -98,7 +99,7 @@ function About() {
 					variant="body2"
 					sx={{ textAlign: "center" }}
 				>
-					Programmé par Etienne les 06 et 07 juin 2023
+					Programmé par Etienne les 06+07 juin 2023 + 06 oct 2023
 				</Typography>
 			</Container>
 		</main>
