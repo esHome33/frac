@@ -215,18 +215,23 @@ const Inputcomp = () => {
 						}
 
 
-						<CircularProgress
-							variant="indeterminate"
-							thickness={7.0}
-							hidden={!calculating && !calculatingFC}
-							sx={{
-								position: "absolute",
-								top: '0%',
-								left: '36%',
-								color: '#DFD',
+						{
+							(calculating || calculatingFC) ?
+								<CircularProgress
+									variant="indeterminate"
+									thickness={7.0}
+									hidden={!calculating && !calculatingFC}
+									sx={{
+										position: "absolute",
+										top: '0%',
+										left: '20%',
+										color: '#DFD',
 
-							}}
-						/>
+									}}
+								/>
+								: null
+						}
+
 					</Box>
 				</FormControl>
 			</form>
@@ -242,7 +247,7 @@ const Inputcomp = () => {
 				<CardActions disableSpacing>
 					<Button
 						variant="outlined"
-						sx={{marginX:'auto'}}
+						sx={{ marginX: 'auto' }}
 						onClick={(e: any) => {
 							e.preventDefault();
 							setReduites_actif(!reduites_actif);
