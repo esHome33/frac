@@ -218,7 +218,7 @@ const Inputcomp = () => {
 						<CircularProgress
 							variant="indeterminate"
 							thickness={7.0}
-							hidden={!(calculating || calculatingFC)}
+							hidden={!calculating && !calculatingFC}
 							sx={{
 								position: "absolute",
 								top: '0%',
