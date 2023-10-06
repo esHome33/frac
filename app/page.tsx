@@ -64,7 +64,7 @@ function Home() {
 				</Link>{" "}
 				- juin 2023
 			</Typography>
-			<Typography variant="body1">
+			<Typography variant="body1" className="text-center">
 				utilisation de
 				<Link
 					href="https://github.com/Daninet/exactnumber"
@@ -73,7 +73,7 @@ function Home() {
 					{" "}
 					exactnumber
 				</Link>{" "}
-				et d&apos;un aglo &quot;maison&quot; pour trouver les réduites +
+				et d&apos;un algo &quot;maison&quot; pour trouver les réduites +
 				décomposer le réel en FC.
 			</Typography>
 		</main>

@@ -33,7 +33,7 @@ export default class Fraction_c {
 		try {
 			val = N(le_reel);
 		} catch (e: any) {
-			throw new Error("ce réel ne convient pas : " + le_reel);
+			throw new Error(`${le_reel} : ce réel ne convient pas`);
 		}
 
 		resu.initialiserPQ();
@@ -43,8 +43,9 @@ export default class Fraction_c {
 		let frac: ExactNumberType;
 		let isZero: boolean;
 		const precisionmax = N("0.00000000000000000000000000000000000000000001");
+		console.log("========================");
 		do {
-			console.log(resu.max_num + " tour : " + val.toString());
+			console.log(`${resu.max_num} tour : ${val.toString()}`);
 			ent = val.intPart();
 			frac = val.fracPart();
 			const ent_s = ent.toString();
