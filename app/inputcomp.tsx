@@ -242,7 +242,7 @@ const Inputcomp = () => {
 				<CardActions disableSpacing>
 					<Button
 						variant="outlined"
-						className="mx-auto"
+						sx={{marginX:'auto'}}
 						onClick={(e: any) => {
 							e.preventDefault();
 							setReduites_actif(!reduites_actif);
